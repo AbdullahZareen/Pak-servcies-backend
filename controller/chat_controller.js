@@ -1,10 +1,11 @@
 import Chat_Model from "../model/chat_model.js";
 export const createMessage = async (req, res) => {
-   const { message  ,mechanic_id, customer_id } = req.body;
+   const { message  ,mechanic_id, customer_id, } = req.body;
    const newObj = Chat_Model({
      Mechanic_id: mechanic_id,
      Customer_id: customer_id,
-     message: message
+     message: message,
+     name:name
    });
    try {
      const dbResponse = await newObj.save();

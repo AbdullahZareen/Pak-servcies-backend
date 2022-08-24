@@ -1,0 +1,244 @@
+{
+	"info": {
+		"_postman_id": "b3e30905-ca5a-4e82-b1ca-a2f4292e0ed0",
+		"name": "PSP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20918169"
+	},
+	"item": [
+		{
+			"name": "createService",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"abc\",\r\n    \"charges\":\"133\",\r\n    \"detail\":\"i am providing best service\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/createservice/63046323c38940e1fa1fef87",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"createservice",
+						"63046323c38940e1fa1fef87"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createCustomer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"yasir\",\r\n    \"email\":\"asif@gmail.com\",\r\n    \"phone_no\":\"0234234\",\r\n    \"city\":\"lahore\",\r\n    \"password\":\"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/createcustomer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"createcustomer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create Mechanic",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"ali\",\r\n    \"email\":\"xyzu\",\r\n    \"phone_no\":\"0234234\",\r\n    \"city\":\"lahore\",\r\n    \"password\":\"1234\",\r\n    \"address\":\"abc\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/createMechanic",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"createMechanic"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAvgRating",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/getavgrating/6301e2d2931fa6843565f73a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"getavgrating",
+						"6301e2d2931fa6843565f73a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createRating",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mechanic_id\":\"6301e2d2931fa6843565f73a\",\r\n    \"customer_id\":\"6302588faef572534f5f4310\",\r\n    \"rating\":\"2\",\r\n    \"feedback\":\"it is good\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/createrating",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"createrating"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"xyz\",\r\n    \"password\":\"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getServicesByCity",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/get/getServicesByCity/lahore",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"get",
+						"getServicesByCity",
+						"lahore"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCustomerById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/getCustomerById/630462f2c38940e1fa1fef83",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"getCustomerById",
+						"630462f2c38940e1fa1fef83"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getMechanicById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/getMechanicById/63046323c38940e1fa1fef87",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"getMechanicById",
+						"63046323c38940e1fa1fef87"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -5,7 +5,7 @@ const MechanicSchema = mongoose.Schema({
   city: { type: String, required: true },
   address: { type: String },
   phone_no: { type: Number, required :true},
-  service: [{ name: String }],
+  service: [{ name: String,charges:Number,detail:String }],
   password:{type:String}
 });
 const Mechanic_Model = mongoose.model("mechanic", MechanicSchema);

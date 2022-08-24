@@ -26,20 +26,21 @@ export const createMechanic = async (req, res) => {
 export const createService = async (req, res) => {
   const { id } = req.params;
   try {
-    await Mechanic_Model.updateOne(
+    const response=await Mechanic_Model.updateOne(
       { _id: id },
-      { $push: { service: req.body.service } }
+      { $push: { service: req.body } }
     );
+    console.log(response)
     res.status(200).json({ success: true, message: "added service" });
   } catch (error) {
     res.status(500).json({ success: false, message: error.message });
   }
 };
-export const getService = async (req, res) => {
-  const address = req.body.address;
+export const getServiceByCity = async (req, res) => {
+  const city = req.params.city;
 
   try {
-    const mechanic = await Mechanic_Model.find({ address: address });
+    const mechanic = await Mechanic_Model.find({ city: city });
     const Servies = mechanic.map((x) => {
       return { mechanic_id: x._id, servies: x.service };
     });

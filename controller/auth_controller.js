@@ -22,6 +22,7 @@ export const login = async (req, res) => {
           id: dbUser._id,
           password: dbUser.password,
           success: true,
+          city:dbUser.city
         });
       } else if (role == "mechanic") {
         const dbUser = await Mechanic_Model.findOne({ email: email });
@@ -32,6 +33,7 @@ export const login = async (req, res) => {
           id: dbUser._id,
           password: dbUser.password,
           success: true,
+          city: dbUser.city,
         });
         }
       else {
