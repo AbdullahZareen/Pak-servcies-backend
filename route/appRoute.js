@@ -26,4 +26,5 @@ router.post("/createMechanic", createMechanic);
 router.post("/createrating", createRating);
 router.post("/login", login);
 router.get("/getavgrating/:mechanic_id", getAvgRating);
+router.get("/getServicesByCategory/:category", getServicesByCategory);
 export default router;
